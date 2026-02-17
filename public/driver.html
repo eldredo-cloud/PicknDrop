@@ -1,1 +1,22 @@
+<h2>PicknDrop Driver</h2>
+<input id="name" placeholder="Enter Your Name">
+<button onclick="start()">Start Tracking</button>
+
+<script>
+function start(){
+  const name=document.getElementById("name").value;
+
+  navigator.geolocation.watchPosition(pos=>{
+    fetch("/location",{
+      method:"POST",
+      headers:{"Content-Type":"application/json"},
+      body:JSON.stringify({
+        name,
+        lat:pos.coords.latitude,
+        lng:pos.coords.longitude
+      })
+    });
+  });
+}
+</script>
 
