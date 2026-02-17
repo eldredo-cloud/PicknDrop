@@ -1,1 +1,13 @@
+{
+  "name": "pickndrop",
+  "version": "1.0.0",
+  "description": "PicknDrop dispatch and tracking system",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
 
